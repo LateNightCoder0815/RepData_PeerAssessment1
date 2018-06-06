@@ -144,7 +144,7 @@ The mean of the original and the imputed dataset is equal. The median of the imp
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-**Task: ** Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+**Task:** Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 
 ```{r}
 ## Locale needs to be set, so that the weekdays are in English 
@@ -158,7 +158,7 @@ dataImputed$weekdays <- as.factor(dataImputed$weekdays)
 levels(dataImputed$weekdays) <- c('weekday','weekend')
 ```
 
-**Task: ** Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)
+**Task:** Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)
 
 
 ```{r}

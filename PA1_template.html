@@ -217,7 +217,7 @@ includedDaysImputed &lt;- length(aggDataImputed$date)</code></pre>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<p><strong>Task: </strong> Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</p>
+<p><strong>Task:</strong> Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</p>
 <pre class="r"><code>## Locale needs to be set, so that the weekdays are in English 
 ## (only necessary for non-english workstations)
 ## This setting somehow depends on the operating system of the machine. On my machine
@@ -227,7 +227,7 @@ invisible(Sys.setlocale(&quot;LC_TIME&quot;, &quot;C&quot;))
 dataImputed$weekdays &lt;- (weekdays(dataImputed$date) %in% c('Saturday', 'Sundays'))
 dataImputed$weekdays &lt;- as.factor(dataImputed$weekdays)
 levels(dataImputed$weekdays) &lt;- c('weekday','weekend')</code></pre>
-<p><strong>Task: </strong> Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)</p>
+<p><strong>Task:</strong> Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis)</p>
 <pre class="r"><code>library(lattice)
 dataImputedAggWeekdays &lt;- aggregate(steps ~ interval + weekdays, data =dataImputed, mean)
 
